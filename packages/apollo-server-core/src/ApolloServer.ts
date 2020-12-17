@@ -94,6 +94,8 @@ import {
 } from './plugin';
 import { InternalPluginId, pluginIsInternal } from './plugin/internalPlugin';
 import { renderPlaygroundPage } from "@apollographql/graphql-playground-html";
+import { html } from "../dist/html";
+import { indexHTML } from "./html";
 
 const NoIntrospection = (context: ValidationContext) => ({
   Field(node: FieldDefinitionNode) {
@@ -1022,7 +1024,7 @@ export class ApolloServerBase {
   }: {
     playground: PlaygroundRenderPageOptions;
   }): string {
-    return renderPlaygroundPage(playground);
+    return indexHTML(renderPlaygroundPage(playground));
   }
 }
 
