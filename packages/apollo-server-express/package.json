@@ -1,6 +1,6 @@
 {
   "name": "@landingexp/apollo-server-express",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Production-ready Node.js GraphQL server for Express and Connect",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
