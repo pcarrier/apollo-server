@@ -93,7 +93,6 @@ import {
   ApolloServerPluginUsageReporting,
 } from './plugin';
 import { InternalPluginId, pluginIsInternal } from './plugin/internalPlugin';
-import { renderPlaygroundPage } from "@apollographql/graphql-playground-html";
 import { html } from "./html";
 
 const NoIntrospection = (context: ValidationContext) => ({
