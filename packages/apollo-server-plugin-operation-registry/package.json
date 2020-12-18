@@ -1,6 +1,6 @@
 {
   "name": "@landingexp/apollo-server-plugin-operation-registry",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Apollo Server operation registry",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

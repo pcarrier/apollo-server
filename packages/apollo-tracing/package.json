@@ -1,6 +1,6 @@
 {
   "name": "@landingexp/apollo-tracing",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Collect and expose trace data for GraphQL requests",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
