@@ -1,6 +1,6 @@
 {
   "name": "@landingexp/graphql-extensions",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Add extensions to GraphQL servers",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
