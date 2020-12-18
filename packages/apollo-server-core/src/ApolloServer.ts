@@ -94,7 +94,8 @@ import {
 } from './plugin';
 import { InternalPluginId, pluginIsInternal } from './plugin/internalPlugin';
 import { renderPlaygroundPage } from "@apollographql/graphql-playground-html";
-import { html } from "./html";
+import { html } from "../dist/html";
+import { indexHTML } from "./html";
 
 const NoIntrospection = (context: ValidationContext) => ({
   Field(node: FieldDefinitionNode) {
@@ -1018,16 +1019,12 @@ export class ApolloServerBase {
     return processGraphQLRequest(options, requestCtx);
   }
 
-  // @ts-ignore
-  protected renderHTML({queryString, playground}: {
-    playground: PlaygroundRenderPageOptions,
-    queryString: string,
+  protected renderHTML({
+    playground,
+  }: {
+    playground: PlaygroundRenderPageOptions;
   }): string {
-    if (queryString.includes("playground")) {
-      return renderPlaygroundPage(playground);
-    } else {
-      return html;
-    }
+    return indexHTML(renderPlaygroundPage(playground));
   }
 }
 

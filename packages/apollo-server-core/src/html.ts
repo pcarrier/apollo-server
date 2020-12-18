@@ -1,4 +1,4 @@
-export const html = `
+export const indexHTML = (playgroundPage: string): string => `
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,29 +16,10 @@ export const html = `
 
     <script>
       const loadPlayground = () => {
-        document.title = "GraphQL Playground";
-
-        const script = document.createElement("script");
-        script.onload = function() {
-          GraphQLPlayground.init(document.getElementById("root"), {
-            // options such as 'endpoint' belong here
-          });
-        };
-        script.src =
-          "//cdn.jsdelivr.net/npm/graphql-playground-react/build/static/js/middleware.js";
-        document.head.appendChild(script);
-
-        const favicon = document.createElement("link");
-        favicon.rel = "shortcut icon";
-        favicon.href =
-          "//cdn.jsdelivr.net/npm/graphql-playground-react/build/favicon.png";
-        document.head.appendChild(favicon);
-
-        const styles = document.createElement("link");
-        styles.rel = "stylesheet";
-        styles.href =
-          "//cdn.jsdelivr.net/npm/graphql-playground-react/build/static/css/index.css";
-        document.head.appendChild(styles);
+        const src = decodeURI("${encodeURI(playgroundPage)}");
+        document.open('text/html');
+        document.write(src);
+        document.close();
       };
 
       /**
